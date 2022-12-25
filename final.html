@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+    
+<div class="body">
+
+
+  <!--
+        ===========LECTURE PART===========
+    -->
+
+    <div class="container">
+      <h1>ADD LECTURES</h1>
+
+      <div class="screen-body-item">
+          <div class ="app">
+
+              <div class ="form-group">
+                  <input
+                type="text"
+                class="form-control"
+                placeholder="LectureName"
+                id="Lecture"
+              />
+              </div>
+
+            <form>
+              <fieldset>
+                <legend>Please select your based noted:</legend>
+                <div>
+                  <input type="radio" id="noteSystem1" name="ns" value="10" />
+                  <label for="contactChoice1">10</label>
+            
+                  <input type="radio" id="noteSystem2" name="ns" value="7" />
+                  <label for="contactChoice2">7</label>
+                </div>
+                
+              </fieldset>
+            </form>
+           
+
+              <div>
+                  <input
+                    type="button"
+                    value="AddLectures"
+                    class="form-button"
+                    onclick="btn_addLectures()"
+                    id="btn_addLectures"
+                  />
+              </div>
+
+               <!-- for see the result-->
+               <div>
+                  <input
+                    type="button"
+                    value="ListAllLecture"
+                    class="form-button"
+                    onclick="btn_listLectures()"
+                  />
+                </div>
+                <div> 
+                  <input
+                    type="button"
+                    value="HideLecture"
+                    class="form-button"
+                    onclick="btn_hideLectures()"
+                  />
+                </div>
+
+          </div>
+      </div>
+    
+
+  </div>
+
+ 
+
+
+  <div class="container">
+      <h1>ADD STUDENT</h1>
+      <div class="screen-body-item">
+
+        <!--  ADD STUDENT PART -->
+
+        <div class="app">
+          <!-- there are separate form-groups for each box-->
+          <div class="form-group">
+            <!-- option for taking the input -->
+            <input
+              type="number"
+              class="form-control"
+              placeholder="StudentId"
+              id="studentId"
+            />
+          </div>
+
+        <div class="form-group">
+          <!-- option for taking the input -->
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Name"
+            id="name"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Surname"
+            id="surname"
+          />
+        </div>
+       
+
+        <div class="form-group">
+          <form action="">
+
+            <input 
+            list="lectureList"
+            placeholder="Lecture"
+            id="lectureInput">
+            <datalist
+            id="lectureList">
+            </datalist>
+          </form>
+        </div>
+
+       
+        <div class="form-group">
+          <input
+            type="number"
+            
+            class="form-control"
+            placeholder="Midterm Note"
+            id="midNote"
+           
+          />
+        </div>
+        <div class="form-group">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Final Note"
+              id="finalNote"
+            />
+        </div>
+
+        <div>
+          <input
+            type="button"
+            value="AddStudent"
+            class="form-button"
+            onclick="btn_addStudents()"
+          />
+        </div>
+      </div>
+
+      </div>
+</div>
+
+
+
+<!--============= SEARCH  STUDENT OR UPDATE PART ===============-->
+<div class="container">
+  <h1>SEARCH LECTURE</h1>
+  <div class="screen-body-item">
+
+
+    <!--============CHOOSE LECTURE OPTİON=============-->
+
+    <div class="app">
+      <form action="">
+
+        <input 
+        list="lectureList"
+        placeholder="Lecture"
+        id="lectureSelectedInput">
+        <datalist
+        id="lectureList">
+        </datalist>
+      </form>
+
+
+      <div>
+        <input
+          type="button"
+          value="SearchLecture"
+          class="form-button"
+          onclick="btn_listSelectedLectures()"
+        />
+      </div>
+      <div>  
+        <input
+          type="button"
+          value="HideLecture"
+          class="form-button"
+          onclick="btn_hideLectures()"
+        />
+      </div>
+      <div>
+        <input
+          type="button"
+          value="DeleteLecture"
+          class="form-button"
+          onclick="btn_DeleteLecture()"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <h1>SEARCH STUDENT</h1>
+  <div class="screen-body-item">
+
+
+    <!--============CHOOSE LECTURE OPTİON=============-->
+
+    <div class="app">
+
+
+    <!--=============SEARCH STUDENT============-->
+
+
+      <div class="form-group">
+        <!-- option for taking the input -->
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Name"
+          id="searchName"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Surname"
+          id="searchSurname"
+        />
+      </div>
+
+      <!-- search student-->
+      <div>
+        <input
+          type="button"
+          value="SearchStudent"
+          class="form-button"
+          onclick="btn_SearchStudents()"
+        />
+      </div>
+
+    
+
+        <!-- failed student-->
+
+        <div>
+          <input
+            type="button"
+            value="FailedStudent"
+            class="form-button"
+            onclick="btn_FailedStudents()"
+          />
+        </div>
+
+
+        <!-- passed student-->
+
+
+        <div>
+          <input
+            type="button"
+            value="PassedStudent"
+            class="form-button"
+            onclick="btn_PassedStudents()"
+          />
+        </div>
+    </div>
+  </div>
+</div>
+</div>  
+ 
+
+  <!-- for updateStudent-->
+  <div id="page">
+    
+    <table id="updateList">
+       
+    </table>
+
+  </div>
+  <!-- for showing the result-->
+  
+    
+    <div id="page">
+      
+      <table id="liste">
+        <tr>
+          <th> Select <br> <input type="checkbox" class="select_all_items"></th>
+          <th>LectureName</th>
+          <th>StudentID</th>
+          <th>StudentName</th>
+          <th>StudentSurname</th>
+          <th>MidtermNote</th>
+          <th>FinalNote</th>
+          <th>Score</th>
+          <th>LetterGrade</th>
+          
+          <th style="background-color: red;" >Delete</th>
+          <th style="background-color: darkblue;">Update</th>
+          
+
+        </tr>
+    </table>
+
+    </div>
+    
+
+     <!--adding external javascript file-->
+     <script src="final.js"></script>
+</body>
+</html>

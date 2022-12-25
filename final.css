@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body part has jsu a background and text size*/
+body {
+  background: #f1f1f1;
+  font-size: 15px;
+  
+}
+
+/*Arranges add lecture, add student , and search parts side by side*/
+.body {
+  display:flex; /*for  default flex direction:row;*/
+  
+}
+  
+/*covers the most basic container elements of our  page*/
+.container {
+  flex: 0 1 700px;
+  border:1px solid black;
+  padding: 10px;   /* to fill a space to capacity and spread beyond its limits*/
+  overflow:scroll;
+}
+  
+/*Allows easy placement of elements within the page*/
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+ 
+}
+
+/* it gives space around input elements, outside of any defined borders.*/
+input {
+  margin: 10px 10px 10px;
+}
+
+/* Properties of element with class .showdata */
+.showdata {
+  color: black;
+  font-size: 1.2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+
+/* properties of app class*/
+.app{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*contains the text of the radio box. gives it a feature*/
+legend {
+  color: black;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 0;
+  border: 0;
+  font-size: 15px;
+}
+
+/*Center captions on the page*/
+h1{
+  text-align:center;
+  
+}
+
+/*Arranges input boxes*/
+.form-control, #lectureInput,#lectureSelectedInput {
+  color: #224059;
+  background-color:  #fcfcfe;
+  border-top: 2px #cce3ff solid;
+  border-left: 2px #cce3ff solid;
+  border-bottom: 2px #31557f solid;
+  border-right: 2px #31557f solid;
+  font:bold 15px Arial, Helvetica, sans-serif; /*it is about text*/
+  padding: 2%;
+    
+}
+
+/* sets button colors*/
+.form-button {
+  background-color: #0171ac; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius:4px;
+  
+}
+/*when we hover over button ,adds shadow and effect to it*/
+.form-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+/* Shows the result of the result part*/
+#page{
+  width: 80%;
+  margin:auto;
+  background: #becdf3;
+  padding:20px;
+  
+}
+/*button attributes*/
+button{
+  margin:auto;
+}
+table{
+  background: #2496d3; /*it gives a color to table*/
+  margin:5px;
+  width: 100%;
+  color:#fff;
+}
+td,th{
+  border:1px solid white;
+  border-spacing: 0px;   /*length of intercellular space*/
+  margin: 0px;
+}
+
+
+
+
+
+
+
